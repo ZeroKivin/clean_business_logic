@@ -3,7 +3,7 @@ import 'package:clean_business_logic/scr/logger/logger.dart';
 
 abstract class UseCase {
   UseCase(this._errorHandler) {
-    _logger = AppLogger.logger;
+    _logger = AppLogger.logger();
   }
 
   final ErrorHandler _errorHandler;

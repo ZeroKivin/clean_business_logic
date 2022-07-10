@@ -3,7 +3,7 @@ import 'package:clean_business_logic/scr/logger/logger.dart';
 
 abstract class Client {
   Client() {
-    _logger = AppLogger.logger;
+    _logger = AppLogger.logger();
   }
 
   late final AppLogger _logger;

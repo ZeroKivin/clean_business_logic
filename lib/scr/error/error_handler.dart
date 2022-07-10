@@ -2,7 +2,7 @@ import 'package:clean_business_logic/scr/logger/logger.dart';
 
 class ErrorHandler {
   ErrorHandler() {
-    _logger = AppLogger.logger;
+    _logger = AppLogger.logger();
   }
 
   late final AppLogger _logger;
