@@ -1,13 +1,16 @@
+import 'package:clean_business_logic/scr/data/client.dart';
 import 'package:clean_business_logic/scr/logger/logger.dart';
 
-abstract class Repository {
-  Repository() {
-    _logger = AppLogger.logger();
-  }
+abstract class Repository<T extends Client> {
+  const Repository({
+    required this.client,
+    required this.logger,
+  });
 
-  late final AppLogger _logger;
+  final AppLogger logger;
+  final T client;
 
   void log(Object message) {
-    _logger.i(message);
+    logger.log(message);
   }
 }
