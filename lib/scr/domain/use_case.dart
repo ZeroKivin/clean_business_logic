@@ -2,7 +2,7 @@ import 'package:clean_business_logic/scr/data/data.dart';
 import 'package:clean_business_logic/scr/error/error_handler.dart';
 import 'package:clean_business_logic/scr/logger/logger.dart';
 
-abstract class UseCase<T extends Repository> {
+abstract class UseCase<I extends IRepository> {
   UseCase({
     required this.repository,
     required this.errorHandler,
@@ -11,7 +11,7 @@ abstract class UseCase<T extends Repository> {
 
   final ErrorHandler errorHandler;
   final AppLogger logger;
-  final T repository;
+  final I repository;
 
   void handleError(Object error) {
     errorHandler.handleError(error);

@@ -1,7 +1,7 @@
 import 'package:clean_business_logic/scr/data/client.dart';
 import 'package:clean_business_logic/scr/logger/logger.dart';
 
-abstract class Repository<T extends Client> {
+abstract class Repository<T extends Client> implements IRepository{
   Repository({
     required this.client,
     required this.logger,
@@ -14,3 +14,5 @@ abstract class Repository<T extends Client> {
     logger.log(message);
   }
 }
+
+abstract class IRepository {}
