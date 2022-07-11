@@ -2,7 +2,7 @@ import 'package:clean_business_logic/scr/data/client.dart';
 import 'package:clean_business_logic/scr/logger/logger.dart';
 
 abstract class Repository<T extends Client> {
-  const Repository({
+  Repository({
     required this.client,
     required this.logger,
   });

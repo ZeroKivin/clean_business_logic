@@ -3,7 +3,7 @@ import 'package:clean_business_logic/scr/error/error_handler.dart';
 import 'package:clean_business_logic/scr/logger/logger.dart';
 
 abstract class UseCase<T extends Repository> {
-  const UseCase({
+  UseCase({
     required this.repository,
     required this.errorHandler,
     required this.logger,

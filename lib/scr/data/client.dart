@@ -1,7 +1,7 @@
 import 'package:clean_business_logic/scr/logger/logger.dart';
 
 abstract class Client {
-  const Client({
+  Client({
     required this.logger,
   });
 
